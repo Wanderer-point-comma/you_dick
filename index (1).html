@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Константину от Михаила</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;900&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0f7be6; --ink:#06143a; --paper:#f4f1e6;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--blue:#0f7be6;--ink:#06143a;--paper:#f4f1e6}}
+:root[data-theme="dark"]{--blue:#0f7be6;--ink:#06143a;--paper:#f4f1e6}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--blue);color:var(--paper);font-family:'Onest',system-ui,sans-serif;overflow-x:hidden}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply;z-index:6}
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;display:flex;align-items:center;padding:6vh 6vw}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 70% 40%,rgba(255,255,255,.14),transparent 60%),radial-gradient(90% 70% at 0% 100%,rgba(6,20,58,.35),transparent 60%)}
+.art{position:absolute;right:0;bottom:0;width:min(100vh,66vw);aspect-ratio:1;z-index:1}
+.art svg{width:100%;height:100%;display:block;overflow:visible}
+.stripe{transform-box:fill-box;transform-origin:50% 0;animation:run 1.5s cubic-bezier(.25,.8,.25,1) both;animation-delay:calc(.25s + var(--i)*.14s)}
+@keyframes run{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.copy{position:relative;z-index:3;max-width:min(60vw,760px)}
+.from{font-family:'Unbounded',sans-serif;font-weight:500;font-size:clamp(14px,1.7vw,22px);color:var(--ink);margin-bottom:2.5vh;letter-spacing:.01em}
+h1{font-family:'Unbounded',Impact,sans-serif;font-weight:900;line-height:.92;font-size:clamp(64px,15vw,230px);text-transform:uppercase;color:var(--paper);
+   text-shadow:.04em .04em 0 var(--ink);filter:url(#rough);letter-spacing:-.02em}
+h1 span{display:block}
+.tag{position:absolute;right:max(4vw,14px);bottom:max(4vh,14px);z-index:4;background:#fff;color:#000;border:2px solid #000;font:700 11px/1.1 Arial,Helvetica,sans-serif;text-align:center;padding:3px 6px 4px;letter-spacing:.04em}
+.tag b{display:block;font-size:9px;border-bottom:2px solid #000;margin-bottom:2px;padding-bottom:2px}
+.cardsec{position:relative;background:var(--ink);padding:12vh 6vw 14vh;display:grid;place-items:center}
+.bizcard{width:min(560px,100%);aspect-ratio:1.75;background:var(--paper);color:var(--ink);padding:clamp(18px,4vw,36px);display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-2.5deg);box-shadow:10px 10px 0 var(--blue);filter:url(#rough2)}
+.bizcard .name{font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(26px,5.2vw,46px);line-height:1}
+.bizcard .role{font-size:clamp(13px,2vw,17px);line-height:1.4;max-width:30ch}
+.bizcard .row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.bizcard .to{font-family:'Unbounded',sans-serif;font-weight:500;font-size:clamp(11px,1.7vw,14px)}
+.bizcard .stamp{font-family:'Unbounded',sans-serif;font-weight:900;font-size:clamp(14px,2.4vw,20px);color:var(--blue);border:3px solid var(--blue);padding:4px 10px;transform:rotate(5deg);white-space:nowrap}
+.again{margin-top:7vh;font-family:'Unbounded',sans-serif;font-weight:500;font-size:15px;background:transparent;color:var(--paper);padding:16px 26px;border:2px solid var(--paper);cursor:pointer}
+.again:hover{background:var(--paper);color:var(--ink)}
+.again:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@media (max-width:760px){
+  .hero{align-items:flex-end;padding-bottom:9vh}
+  .art{width:112vw;right:-16vw;bottom:auto;top:0}
+  .copy{max-width:100%}
+  h1{font-size:clamp(70px,24vw,150px)}
+  .tag{top:max(2vh,12px);bottom:auto}
+}
+@media (prefers-reduced-motion:reduce){.stripe{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+  <filter id="rough2"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="2"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
+  <filter id="paint" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter>
+</svg>
+<svg class="grain" width="100%" height="100%" aria-hidden="true"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .08  0 0 0 0 .25  0 0 0 0 .65  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+
+<main>
+<section class="hero">
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMaxYMax meet">
+      <g filter="url(#paint)">
+        <path d="M52 108 H248 L52 446 Z" fill="#06143a"/>
+        <path d="M52 112 C120 103 200 105 252 118 L246 134 C190 125 120 123 52 130Z" fill="#f4f1e6"/>
+        <g fill="#f4f1e6">
+          <rect class="stripe" style="--i:0" x="82" y="124" width="12" height="262" rx="6"/>
+          <rect class="stripe" style="--i:1" x="108" y="124" width="11" height="214" rx="5.5"/>
+          <rect class="stripe" style="--i:2" x="134" y="124" width="10" height="168" rx="5"/>
+          <rect class="stripe" style="--i:3" x="160" y="124" width="9" height="124" rx="4.5"/>
+          <rect class="stripe" style="--i:4" x="186" y="124" width="8" height="84" rx="4"/>
+          <rect class="stripe" style="--i:5" x="210" y="124" width="7" height="44" rx="3.5"/>
+        </g>
+        <ellipse cx="238" cy="72" rx="24" ry="30" fill="#06143a"/>
+        <path d="M226 62C232 54 246 52 254 58C248 70 238 76 228 74Z" fill="#f4f1e6"/>
+        <path d="M268 118 L428 118 L437 125 L430 135 L292 148Z" fill="#06143a"/>
+        <path d="M222 100C206 138 214 190 244 236C256 266 248 304 246 344C242 392 238 426 244 458L268 458C270 414 290 364 298 322C308 280 318 250 314 216C311 180 300 152 288 126C270 108 244 98 222 100Z" fill="#06143a"/>
+        <g fill="#f4f1e6">
+          <path d="M226 118C258 150 288 200 300 255C304 272 296 276 292 262C282 220 258 176 226 138Z"/>
+          <ellipse cx="296" cy="162" rx="7" ry="16" transform="rotate(-18 296 162)"/>
+          <ellipse cx="309" cy="214" rx="6" ry="14" transform="rotate(-14 309 214)"/>
+          <path d="M296 322C298 384 282 424 270 458L263 458C277 422 290 382 296 322Z"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="copy">
+    <p class="from">Константину от Михаила —</p>
+    <h1><span>Ты</span><span>хуй</span></h1>
+  </div>
+  <div class="tag" aria-hidden="true"><b>PARENTAL ADVISORY</b>EXPLICIT CONTENT</div>
+</section>
+
+<section class="cardsec">
+  <div class="bizcard">
+    <div class="name">Михаил</div>
+    <div class="role">Говорит в лицо то, что другие думают за спиной.</div>
+    <div class="row"><span class="to">Константину от Михаила</span><span class="stamp">ТЫ ХУЙ</span></div>
+  </div>
+  <button class="again" onclick="window.scrollTo({top:0,behavior:'smooth'})">Прочитать ещё раз</button>
+</section>
+</main>
+</body>
+</html>
